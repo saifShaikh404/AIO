@@ -1,0 +1,129 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+*{
+    line-height: normal;
+    box-sizing: border-box;
+}
+
+section{
+    margin-top: 20px;
+}
+
+.m-heading h2{
+    font-weight: 400;
+    margin: 0px;
+    padding: 5px 20px;
+    background-color: rgba(0,0,0,0.01);
+    border: 1px solid rgba(0,0,0,0.06);
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.m-heading{
+    display: flex;
+    /* margin: 0px 2%; */
+}
+
+.m-box{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+    margin: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-top: 3px solid #292929;
+}
+
+.m-img{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.m-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.m-box a{
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    display: -webkit-box;
+    max-width: 80%;
+    
+    -webkit-line-clamp: vertical;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    color: #3a3a3a;
+    /* margin: 20px; */
+
+    /* custom  */
+    margin: 12px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    /*  200  54*/
+}
+
+.m-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.2s;
+}
+
+.m-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media(max-width:680px){
+    .m-box{
+        flex-direction: row;
+        /* align-items: center; */
+        width: 90%;
+        border: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .m-box a{
+        /* display: flex;
+        align-items: center; */
+        /* align-self: center; */
+        width: 65%;
+
+        /* custom  */
+        height: 150px;
+        /* 207 54 */
+    }
+}
+
+@media(max-width:440px){
+    /* m-box a 324 36  */
+    .m-box a,.m-box{
+        width: 100%;
+    }
+    
+    /* custom  */
+    .m-box a{
+        height: 80px;
+        font-size: 14px !important;
+    }
+
+    .m-box{
+        flex-direction: column;
+    }
+
+}

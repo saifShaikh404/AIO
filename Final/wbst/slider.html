@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- <link rel="stylesheet" href="custom-nav.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" rel="stylesheet">
+
+    
+
+    <style>
+
+        body{
+            background-color: rgb(175, 172, 172);
+        }
+
+        .cards-container{
+            background-color: white;
+        }
+
+        .slick-slide {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .defaultnext{
+            border: 2px solid gray;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            color: gray;
+            top: 50%;
+            right: -70px;
+        }
+        
+        .defaultprev{
+            border: 2px solid gray;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            color: gray;
+            top: 50%;
+            left: -70px;
+        }
+
+        @media screen and (max-width:992px){
+            .defaultnext{
+            border: 2px solid gray;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            color: gray;
+            top: 50%;
+            right: -70px;
+        }
+        
+        .defaultprev{
+            border: 2px solid gray;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            font-size: 25px;
+            color: gray;
+            top: 50%;
+            left: -70px;
+        }
+        }
+
+        /* let obj ={
+                        one: 992,
+                        two: 768,
+                        three: 576,
+                    } */
+
+        /* .card-slider .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-slider .card img {
+            transition: transform 0.3s ease;
+        }
+
+        .card-slider .card img:hover {
+            transform: scale(1.1);
+        } */
+        
+    </style>
+    <title>Slider</title>
+</head>
+
+<body>
+    <!-- card 1 -->
+    <div class="py-2 cards-container mt-2">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h3>Movies</h3>
+            <button class="btn btn-primary">View All >></button>
+        </div>
+        <hr>
+        <div class="card-slider container my-2">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://img.freepik.com/free-photo/glowing-futuristic-digital-design-network-server-generated-by-ai_188544-27277.jpg?t=st=1689062321~exp=1689065921~hmac=423055a242c7be132741a40ddf07893de48a56cbc9fb78cddbb6e3a329619d3d&w=900" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <!-- card 2 -->
+    <div class="py-2 my-2 cards-container"">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h3>Series</h3>
+            <button class="btn btn-primary">View All >></button>
+        </div>
+        <hr>
+        <div class="card-slider container my-2">
+            <div class="card">
+                <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=1" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=2" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=3" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=4" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=5" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=6" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top img-fluid" src="https://picsum.photos/800/600?random=7" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <!-- <script src="js/jquery-3.7.0.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script> -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            $('.card-slider').slick({
+                dots: false,
+                infinite: false,
+                arrows: true,
+                nextArrow:"<i class='bi defaultnext bi-arrow-right'></i>",
+                prevArrow:"<i class='bi defaultprev bi-arrow-left'></i>",
+                autoplay: false,
+                speed: 300,
+                draggable: true,
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 4,
+                            arrows: true,
+                            nextArrow:"<i class='bi defaultnext bi-arrow-right'></i>",
+                            prevArrow:"<i class='bi defaultprev bi-arrow-left'></i>",
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: false,
+                            draggable: true,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            arrows: true,
+                            nextArrow:"<i class='bi defaultnext bi-arrow-right'></i>",
+                            prevArrow:"<i class='bi defaultprev bi-arrow-left'></i>",
+                            slidesToScroll: 2,
+                            draggable: true,
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 2,
+                            arrows: true,
+                            nextArrow:"<i class='bi defaultnext bi-arrow-right'></i>",
+                            prevArrow:"<i class='bi defaultprev bi-arrow-left'></i>",
+                            slidesToScroll: 2,
+                            draggable: true,
+                        }
+                    },
+                    {
+                        breakpoint: 440,
+                        settings: {
+                            slidesToShow: 1,
+                            arrows: true,
+                            nextArrow:"<i class='bi defaultnext bi-arrow-right'></i>",
+                            prevArrow:"<i class='bi defaultprev bi-arrow-left'></i>",
+                            slidesToScroll: 1,
+                            draggable: true,
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+
+        const cardTextElements = document.querySelectorAll(".card-text");
+        console.log(cardTextElements);
+        Array.from(cardTextElements).forEach((cardTextElement) => {
+        const textContent = cardTextElement.innerText;
+        if (textContent.length >= 50) {
+            cardTextElement.innerHTML = textContent.substring(0, 60) + "...";
+        }
+        }); 
+
+    </script>
+</body>
+
+</html>

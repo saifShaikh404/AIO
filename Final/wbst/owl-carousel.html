@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+
+        .img-hov:hover {
+            opacity: 0.5;
+        }
+        
+        .img-hov {
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the shadow color and opacity */
+            opacity: 1; /* Initially hidden */
+            transition: opacity 0.3s ease;
+        }
+
+        
+        </style>
+</head>
+<body>
+
+    <div class="owl-carousel">
+        <!-- Your slides go here -->
+        <div class="item"><img class="img-hov" src="https://picsum.photos/1000/600?random=7" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="item"><img src="https://picsum.photos/1000/600?random=7" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+        <div class="item"><img src="https://picsum.photos/1000/600?random=7" alt="Card image cap">
+            <div class="card-body">
+                <p class="card-text text-center">This is a longer card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.owl-carousel').owlCarousel({
+            items: 3,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: true,
+            navText: ["<i class='bi bi-arrow-right'></i>", "<i class='bi bi-arrow-left'></i>"]
+          });
+        });
+    </script>
+      
+</body>
+</html>

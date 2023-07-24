@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <!-- Original https://codepen.io/hello-ajayrawat/pen/boJyXq -->
+    <section id="navbar">
+            <div class="navbar__container">
+                <nav class="navbar__flex">
+                <div class="navbar__left">
+                    <!-- <span class="navbar__hamburger"><h2>LOGO</h2></span> -->
+                    <span class="navbar__hamburger"></span>
+                    <form class="navbar__search">
+                    <div class="navbar__inputwithicon">
+                        <form action="https://www.google.com" method="post">
+                            <input type="text" name="" class="navbar__input" placeholder="Search my site...">
+                            <input type="submit" name="" class="navbar__button" value="">
+                        </form>
+                    </div>
+                    </form>
+                </div>
+                <div class="navbar__right">
+                    <label for="navbarToggler" class="navbar__toggler__label">
+                    <span class="navbar__hamberger"></span>
+                    <span>Menu</span></label>
+                    <input type="checkbox" name="" class="navbar__toggler__input" id="navbarToggler">
+                    <ul class="navbar__links">
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-clapperboard"></i> Anime Movies</a></li>
+                    <li><a href="#"><i class="fa-solid fa-list"></i> Categories</a>
+                        <ul class="navbar__sublinks">
+                            <li><a href="#">linkedin</a></li>
+                            <li><a href="#">dribbble</a></li>
+                            <li><a href="#">behance</a></li>
+                            <li><a href="#">codepen</a></li>
+                            <li><a href="#">vimeo</a></li>
+                            <li><a href="#">linkedin</a></li>
+                            <li><a href="#">dribbble</a></li>
+                            <li><a href="#">behance</a></li>
+                            <li><a href="#">codepen</a></li>
+                            <li><a href="#">vimeo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-link-slash"></i> Report Links</a></li>
+                    <li><a href="#"><i class="fa-solid fa-box"></i> Request Anime</a></li>
+                    </ul>
+                </div>
+                </nav>
+            </div>
+    </section>
+
+    <scrip src="js/jquery-3.7.0.js"></script>
+    <scrip src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
