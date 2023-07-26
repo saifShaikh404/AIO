@@ -1,0 +1,62 @@
+[
+ id,
+ url_name,
+ original_name,
+ show_name,
+ dual_aud,
+ subtitle,
+ hd,
+ drive_link(space seperated),
+ btn_name(underscore seperated),
+ genre_name(underscore seperated),
+ genre_link(space seperated),
+ img1,
+ img2,
+
+//optional
+ note,
+
+// details
+ about1,
+ about2,
+ 
+ type,
+ date_aired_from,
+ date_aired_to,
+ duration,
+ episodes,
+ premiered,
+ status,
+ studios,
+ producers,
+]
+
+
+// search data from 2 table
+$check = "";
+$this->db->select('*');
+$this->db->from('datas');
+$this->db->join('other_table', 'datas.common_column = other_table.common_column', 'inner');
+$this->db->group_start();
+
+foreach ($keyVal as $value) {
+    // All prepositions, all helping verbs
+    $ignoredWords = array("am", "from", "with", "to", "for", "is", "are", "and", "at", "on", "the", "in", "was");
+    if (in_array($value, $ignoredWords)) {
+        continue;
+    } else {
+        $this->db->or_like('LOWER(datas.name)', $value);
+        $this->db->or_like('LOWER(other_table.name)', $value);
+        $check = $check . $value;
+    }
+}
+
+$this->db->group_end();
+
+if (empty($check)) {
+    return "";
+} else {
+    $query = $this->db->get();
+    return $query->result_array();
+}
+
